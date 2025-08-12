@@ -1,0 +1,71 @@
+.game-area {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.flash{
+    opacity: 1;
+    cursor: pointer;
+}
+.flexone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flextwo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#red{
+    background-color: tomato;
+}
+#blue {
+    background-color: cornflowerblue;
+}
+#green {
+    background-color: mediumseagreen;
+}
+#yellow {
+    background-color: rgb(163, 221, 26);
+}
+body{
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.flash{
+    background-color: aliceblue;
+}
+
+.userflash{
+    background-color: rgb(17, 32, 2);
+}
+h3{
+    text-align: center;
+}
+
+
+
+
+
+
