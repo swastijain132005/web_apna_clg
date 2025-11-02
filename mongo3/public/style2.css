@@ -1,0 +1,113 @@
+
+/* ===== Page Centering ===== */
+
+/* Center container for heading + form */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading Style */
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff4d6d; /* vibrant pink */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+/* Decorative underline */
+h3::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3, #ff4d6d);
+  left: 20%;
+  bottom: -6px;
+  border-radius: 2px;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Form Card ===== */
+form {
+  background: #ffffff;
+  padding: 35px 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+form h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ff6f61; /* vibrant coral */
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ===== Inputs & Textarea ===== */
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 15px;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  background: #fafafa;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+  border-color: #ff758c;
+  background: #fff0f3;
+}
+
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ===== Button Styling ===== */
+form button {
+  width: 100%;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3, #ff6f61);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 105, 135, 0.3);
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}

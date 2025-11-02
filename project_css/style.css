@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+}
+.main_box{
+    background-image: url("photo.jpg");
+    background-size: cover;
+    height: 100vh;
+
+}
+.sidebar menu.menu li:hover{
+box-shadow: 0 0 10px #a9a1a1;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mini-wtsp</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h3>All Chats</h3>
+  <form method="GET" action="/Chats/new">
+    <button type="submit">New Chat</button>
+  </form>
+
+  <% for (let chat of chats) { %>
+    <div class="chat">
+      <p><strong>FROM:</strong> <%= chat.from %></p>
+      <p><strong>TO:</strong> <%= chat.to %></p>
+      <div class="msg">
+        <p><strong>MESSAGE:</strong> <%= chat.msg %></p>
+        
+      </div>
+      <p><strong>TIMESTAMP:</strong> <%= chat.timestamp.toLocaleString() %></p>
+      <div class="btn"><form action="/Chats/<%=chat._id%>/edit" method="get">
+            <button type="submit">edit</button>
+        </form>
+         <form action="/Chats/<%=chat._id%>?_method=DELETE" method="POST"
+          onsubmit="return confirm('Do you really want to delete this chat?');">
+        <button type="submit">delete chat</button></form></div>
+      
+    </div>
+  <% } %>
+
+</body>
+</html>
